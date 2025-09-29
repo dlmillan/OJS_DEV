@@ -1,4 +1,4 @@
-FROM pkpofficial/ojs:3.3.0-16
+FROM pkpofficial/ojs
 
 # Activo mod_rewrite en Apache
 RUN a2enmod rewrite
