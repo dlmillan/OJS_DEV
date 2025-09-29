@@ -1,0 +1,8 @@
+# Detecta HTTPS desde proxy (Railway) y evita Mixed Content
+SetEnvIf X-Forwarded-Proto https HTTPS=on
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
