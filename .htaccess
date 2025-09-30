@@ -1,4 +1,4 @@
-# Detecta HTTPS desde proxy (Railway) y evita Mixed Content
+# Marca la request como HTTPS cuando venga detrás de proxy (Railway)
 SetEnvIf X-Forwarded-Proto https HTTPS=on
 
 <IfModule mod_rewrite.c>
